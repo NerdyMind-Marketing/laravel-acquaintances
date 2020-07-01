@@ -1,7 +1,7 @@
 # Laravel 7 Acquaintances
 
-[![Latest Version](https://img.shields.io/github/release/multicaret/laravel-acquaintances.svg?style=flat-square)](https://github.com/multicaret/laravel-acquaintances/releases)
-[![Total Downloads](https://img.shields.io/packagist/dt/multicaret/laravel-acquaintances.svg?style=flat-square)](https://packagist.org/packages/multicaret/laravel-acquaintances)
+[![Latest Version](https://img.shields.io/github/release/nerdymind/laravel-acquaintances.svg?style=flat-square)](https://github.com/NerdyMind-Marketing/laravel-acquaintances/releases)
+[![Total Downloads](https://img.shields.io/packagist/dt/nerdymind/laravel-acquaintances.svg?style=flat-square)](https://packagist.org/packages/nerdymind/laravel-acquaintances)
 [![License](https://poser.pugx.org/multicaret/laravel-acquaintances/license.svg?style=flat-square)](https://packagist.org/packages/multicaret/laravel-acquaintances)
 
 
