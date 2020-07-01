@@ -1,3 +1,6 @@
+## v3.3.2
+* Change id to utilize UUID from https://github.com/goldspecdigital/laravel-eloquent-uuid
+
 ## v3.3.1
 * Added `ratings()` & `ratingsPure()` to CanBeRated model
 * Added user model name to configs `user_model_class_name`
