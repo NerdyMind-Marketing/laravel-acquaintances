@@ -4,6 +4,12 @@
 namespace Multicaret\Acquaintances;
 
 use Illuminate\Support\ServiceProvider;
+use Multicaret\Acquaintances\Observers\FriendshipGroupObserver;
+use Multicaret\Acquaintances\Observers\FriendshipObserver;
+use Multicaret\Acquaintances\Observers\InteractionRelationObserver;
+use Multicaret\Acquaintances\Models\FriendFriendshipGroups;
+use Multicaret\Acquaintances\Models\Friendship;
+use Multicaret\Acquaintances\Models\InteractionRelation;
 
 class AcquaintancesServiceProvider extends ServiceProvider
 {
@@ -15,6 +21,9 @@ class AcquaintancesServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->registerMigrations();
+        Friendship::observe(new FriendshipObserver());
+        FriendFriendshipGroups::observe(new FriendshipGroupObserver());
+        InteractionRelation::observe(new InteractionRelationObserver());
     }
 
     /**
