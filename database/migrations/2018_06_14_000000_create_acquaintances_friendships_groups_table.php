@@ -14,14 +14,25 @@ class CreateAcquaintancesFriendshipsGroupsTable extends Migration
 
         Schema::create(config('acquaintances.tables.friendship_groups'), function (Blueprint $table) {
 
-            $table->integer('friendship_id')->unsigned();
-            $table->morphs('friend');
-            $table->integer('group_id')->unsigned();
+//            $table->integer('friendship_id')->unsigned();
+//            $table->morphs('friend');
+//            $table->integer('group_id')->unsigned();
+//
+//            $table->foreign('friendship_id')
+//                  ->references('id')
+//                  ->on(config('acquaintances.tables.friendships'))
+//                  ->onDelete('cascade');
+//
+//            $table->unique(['friendship_id', 'friend_id', 'friend_type', 'group_id'], 'unique');
+
+            $table->uuid('friendship_id');
+            $table->uuid('friend_id'); $table->string('friend_type');
+            $table->integer('group_id')->unsigned(); // used like an enum, not an actual model ID
 
             $table->foreign('friendship_id')
-                  ->references('id')
-                  ->on(config('acquaintances.tables.friendships'))
-                  ->onDelete('cascade');
+                ->references('id')
+                ->on(config('acquaintances.tables.friendships'))
+                ->onDelete('cascade');
 
             $table->unique(['friendship_id', 'friend_id', 'friend_type', 'group_id'], 'unique');
 

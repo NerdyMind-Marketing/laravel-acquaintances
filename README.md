@@ -78,7 +78,7 @@ You can easily design your social-like System (Facebook, Twitter, Foursquare...e
 First, install the package through Composer.
 
 ```sh
-$ composer require multicaret/laravel-acquaintances
+$ composer require nerdymind/laravel-acquaintances
 ```
 Laravel 5.8 => version 2.x (branch master)
 

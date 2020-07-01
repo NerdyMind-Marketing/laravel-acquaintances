@@ -3,7 +3,8 @@
 
 namespace Multicaret\Acquaintances\Models;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
+use GoldSpecDigital\LaravelEloquentUUID\Database\Eloquent\Model;
 
 /**
  * Class Friendship
@@ -24,6 +25,14 @@ class Friendship extends Model
         $this->table = config('acquaintances.tables.friendships');
 
         parent::__construct($attributes);
+    }
+
+    /**
+     * @return string
+     */
+    public function getKeyType()
+    {
+        return 'string'; // using UUID, needs to be a string
     }
 
     /**
